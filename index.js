@@ -114,7 +114,7 @@ setInterval(() => {
             artist: exec('playerctl', ['metadata', 'xesam:artist']).stdout,
             status: exec('playerctl', ['status']).stdout,
             loop: exec('playerctl', ['loop']).stdout,
-            shuffle: exec('playerctl', ['shuffle]),
+            shuffle: exec('playerctl', ['shuffle']),
         }
     } finally {
         io.sockets.emit('update', output);
